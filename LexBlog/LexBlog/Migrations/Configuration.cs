@@ -9,7 +9,7 @@ namespace LexBlog.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(LexBlog.Models.ApplicationDbContext context)
