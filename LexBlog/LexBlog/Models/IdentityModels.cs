@@ -25,6 +25,13 @@ namespace LexBlog.Models
         {
         }
 
+        public DbSet<Blog> Blog { get; set; }
+        public DbSet<Comment> Comment { get; set; }
+        public DbSet<Post> Post { get; set; }
+        public DbSet<Role> Role { get; set; }
+        public DbSet<Tag> Tag { get; set; }
+        public DbSet<User> User { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
