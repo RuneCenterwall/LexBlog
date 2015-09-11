@@ -26,6 +26,23 @@ namespace LexBlog.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+            //if (!context.Blogs.Any(b => b.Title == null))
+            //{
+            //    var Blog = new LexBlog.Models.Blog();
+            //    context.Blogs.AddOrUpdate
+            //}
+            context.Blogs.AddOrUpdate(
+                    b => b.Title, // identifier - if this value already exists, update instead of add
+                    new LexBlog.Models.Blog()
+                    {
+                        Title = "TestBlog01",
+                        Body = "TestBody01",
+                        Created = DateTime.Now,
+                        Edited = DateTime.Now,
+                        Views = 200
+                    }
+                );
         }
     }
 }
