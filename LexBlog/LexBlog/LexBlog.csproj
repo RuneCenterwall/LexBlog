@@ -165,6 +165,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201509141315062_dataannotation.cs" />
+    <Compile Include="Migrations\201509141315062_dataannotation.Designer.cs">
+      <DependentUpon>201509141315062_dataannotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201509141317357_dataannotationigen.cs" />
+    <Compile Include="Migrations\201509141317357_dataannotationigen.Designer.cs">
+      <DependentUpon>201509141317357_dataannotationigen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Blog.cs" />
@@ -254,6 +262,14 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201509141315062_dataannotation.resx">
+      <DependentUpon>201509141315062_dataannotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201509141317357_dataannotationigen.resx">
+      <DependentUpon>201509141317357_dataannotationigen.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

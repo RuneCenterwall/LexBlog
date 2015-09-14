@@ -46,12 +46,23 @@ namespace LexBlog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,Body,Created,Edited,Owner,Views")] Blog blog)
+        public ActionResult Create([Bind(Include = "Title,Body")] Blog blog)
         {
+
+            
+            
             if (ModelState.IsValid)
             {
+
+
+
+                blog.Created = DateTime.Now;
+                blog.Edited = DateTime.Now;
+                blog.Views = 0;
+                //    blog.Owner =
                 db.Blogs.Add(blog);
                 db.SaveChanges();
+                
                 return RedirectToAction("BlogView");
             }
 
