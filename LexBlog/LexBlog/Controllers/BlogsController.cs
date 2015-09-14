@@ -123,5 +123,10 @@ namespace LexBlog.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult MyBlog()
+        {
+            return View();
+        }
     }
 }
