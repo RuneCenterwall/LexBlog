@@ -21,9 +21,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*Här ska sökfält vara*@
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -37,6 +35,9 @@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - n´Rap Ltd.</p>
+            
+            @Html.ActionLink("About", "About", "Home")
+            @Html.ActionLink("Contact", "Contact", "Home")
         </footer>
     </div>
 
