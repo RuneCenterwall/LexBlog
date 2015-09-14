@@ -243,6 +243,7 @@
     <Content Include="Views\Blogs\Index.cshtml" />
     <Content Include="Views\Shared\_BlogAdminButtons.cshtml" />
     <Content Include="Views\Blogs\MyBlog.cshtml" />
+    <Content Include="Views\Blogs\BlogView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

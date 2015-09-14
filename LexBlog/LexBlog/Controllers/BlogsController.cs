@@ -52,7 +52,7 @@ namespace LexBlog.Controllers
             {
                 db.Blogs.Add(blog);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("BlogView");
             }
 
             return View(blog);
@@ -125,6 +125,11 @@ namespace LexBlog.Controllers
         }
 
         public ActionResult MyBlog()
+        {
+            return View();
+        }
+
+        public ActionResult BlogView()
         {
             return View();
         }
