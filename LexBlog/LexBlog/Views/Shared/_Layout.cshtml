@@ -46,10 +46,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - n´Rap Ltd.</p>
-            
-            @Html.ActionLink("About", "About", "Home")
-            @Html.ActionLink("Contact", "Contact", "Home")
+            <p>&copy; @DateTime.Now.Year - n´Rap Ltd.</p> 
+            @Html.ActionLink("About", "About", "Home") | @Html.ActionLink("Contact", "Contact", "Home")
         </footer>
     </div>
 
