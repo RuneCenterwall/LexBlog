@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LexBlog.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -25,6 +26,13 @@ namespace LexBlog.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        }
+
+        public ActionResult GetUserName(string userId)
+        {
+            ApplicationDbContext db = new ApplicationDbContext();
+            var usr = db.Users.First(user => user.Id == userId);
+            return Content(usr.FirstName + " " + usr.LastName);
         }
     }
 }
