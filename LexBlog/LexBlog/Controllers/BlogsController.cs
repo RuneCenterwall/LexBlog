@@ -59,7 +59,7 @@ namespace LexBlog.Controllers
                 blog.Created = DateTime.Now;
                 blog.Edited = DateTime.Now;
                 blog.Views = 0;
-                //    blog.Owner =
+                blog.Owner = db.Users.First(usr => usr.UserName == User.Identity.Name);
                 db.Blogs.Add(blog);
                 db.SaveChanges();
                 

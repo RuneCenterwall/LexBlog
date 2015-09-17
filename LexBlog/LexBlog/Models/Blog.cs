@@ -16,7 +16,7 @@ namespace LexBlog.Models
         public DateTime Created { get; set; }
         [DisplayFormat(DataFormatString = "{0:MMM dd, yyyy}")]
         public DateTime Edited { get; set; }
-        public int Owner { get; set; }
+        public virtual ApplicationUser Owner { get; set; }
         public int Views { get; set; }    
         
              
