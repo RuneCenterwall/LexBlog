@@ -196,6 +196,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="img\Logo.png" />
     <Content Include="img\nrap.jpg" />
+    <Content Include="img\Nrap.png" />
     <Content Include="img\Nrap2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
