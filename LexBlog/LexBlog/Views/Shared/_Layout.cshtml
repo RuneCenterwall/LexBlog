@@ -17,8 +17,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("n´Rap Blogs!", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" }) 
-                <a class="navbar-brand" rel="home" href="#" title="N´rap Blogs">
+                <a class="navbar-brand" rel="home" href='@Url.Action("Index","Home")' title="Home">
                     <img style="max-width:100px; margin-top: -7px;"
                          src="~/img/Logo.png">
                 </a>             
