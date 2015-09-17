@@ -4,7 +4,7 @@
     <ul class="nav navbar-nav navbar-left">
 
         <li>@Html.ActionLink("Create blog", "Create", "Blogs")</li>
-        <li>@Html.ActionLink("My Blogs", "MyBlog", "Blogs")</li>
+        <li>@Html.ActionLink("My Blogs", "Index", "Blogs", new { userName = User.Identity.Name }, new { })</li>
     </ul>
 }
 

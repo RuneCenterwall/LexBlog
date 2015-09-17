@@ -48,7 +48,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", new { userName = User.Identity.Name})
 </div>
 
 @section Scripts {

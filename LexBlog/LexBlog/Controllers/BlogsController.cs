@@ -15,9 +15,19 @@ namespace LexBlog.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Blogs
-        public ActionResult Index()
+        public ActionResult Index(string userName)
         {
-            return View(db.Blogs.ToList());
+            List<Blog> blogList;
+            if (string.IsNullOrEmpty(userName))
+            {
+                blogList = db.Blogs.ToList();
+            }
+            else
+            {
+                blogList = db.Blogs.Where(b => b.Owner.UserName == userName).ToList();
+            }
+
+            return View(blogList);
         }
 
         // GET: Blogs/Details/5
