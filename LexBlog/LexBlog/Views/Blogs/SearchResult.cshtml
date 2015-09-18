@@ -1,7 +1,32 @@
-﻿
+﻿@model IEnumerable<LexBlog.Models.Blog>
+
 @{
     ViewBag.Title = "SearchResult";
 }
 
 <h2>SearchResult</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Body)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Created)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Edited)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Owner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Views)
+        </th>
+        <th></th>
+    </tr>
+</table>
 
