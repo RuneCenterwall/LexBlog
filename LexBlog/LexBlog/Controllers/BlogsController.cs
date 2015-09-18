@@ -166,6 +166,11 @@ namespace LexBlog.Controllers
             return View();
         }
 
+        public ActionResult CreatePost()
+        {
+            return View();
+        }
+
 
     }
 }

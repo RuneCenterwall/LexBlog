@@ -258,6 +258,8 @@
     <Content Include="Views\Blogs\MyBlog.cshtml" />
     <Content Include="Views\Blogs\BlogView.cshtml" />
     <Content Include="Views\Blogs\SearchResult.cshtml" />
+    <Content Include="Views\Shared\_ShowTags.cshtml" />
+    <Content Include="Views\Blogs\CreatePost.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
