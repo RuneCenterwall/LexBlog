@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using LexBlog.Models;
+using Microsoft.AspNet.Identity;
 
 namespace LexBlog.Controllers
 {
@@ -99,13 +100,18 @@ namespace LexBlog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Title,Body,Created,Edited,Owner,Views")] Blog blog)
+        public ActionResult Edit([Bind(Include = "Id,Created,Title,Body,Views")] Blog blog)
         {
+            
+            
             if (ModelState.IsValid)
             {
+                blog.Edited = DateTime.Now;
                 db.Entry(blog).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
+                        
+                             
             }
             return View(blog);
         }
