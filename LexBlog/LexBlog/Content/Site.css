@@ -149,3 +149,7 @@ footer {
 .navbar-custom .navbar-link:hover {
   color: #c0c0c0;
 }
+
+.btn-group {
+    padding-top: 8px;
+}
