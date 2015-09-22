@@ -60,8 +60,8 @@ namespace LexBlog.Controllers
         public ActionResult Create([Bind(Include = "Title,Body")] Blog blog)
         {
 
-            
-            
+
+
             if (ModelState.IsValid)
             {
 
@@ -73,7 +73,7 @@ namespace LexBlog.Controllers
                 blog.Owner = db.Users.First(usr => usr.UserName == User.Identity.Name);
                 db.Blogs.Add(blog);
                 db.SaveChanges();
-                
+
                 return RedirectToAction("BlogView");
             }
 
@@ -102,16 +102,16 @@ namespace LexBlog.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Created,Title,Body,Views")] Blog blog)
         {
-            
-            
+
+
             if (ModelState.IsValid)
             {
                 blog.Edited = DateTime.Now;
                 db.Entry(blog).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
-                        
-                             
+
+
             }
             return View(blog);
         }
@@ -161,19 +161,28 @@ namespace LexBlog.Controllers
             return View();
         }
 
-        public ActionResult SearchResult()
+        public ActionResult SearchResult(String searchtext)
         {
-            return View();
+
+
+
+            return RedirectToAction("AllResult", new { message = "Search Result" });
         }
 
         public ActionResult ViewResult()
         {
-            return RedirectToAction("SearchResult", new {  });
+            return RedirectToAction("AllResult", new { message = "Views Result" });
         }
 
         public ActionResult TagResult()
         {
-            return RedirectToAction("SearchResult", new {  });
+            return RedirectToAction("AllResult", new { message = "Tags Result" });
+        }
+
+        public ActionResult AllResult(string message)
+        {
+            ViewBag.rubrik = message;
+            return View();
         }
 
 
