@@ -166,6 +166,18 @@ namespace LexBlog.Controllers
             return View();
         }
 
+        public ActionResult ViewResult()
+        {
+            return RedirectToAction("SearchResult", new {  });
+        }
+
+        public ActionResult TagResult()
+        {
+            return RedirectToAction("SearchResult", new {  });
+        }
+
+
+
         public ActionResult CreatePost()
         {
             return View();
