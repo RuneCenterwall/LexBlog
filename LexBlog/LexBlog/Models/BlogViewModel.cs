@@ -6,7 +6,14 @@ using System.Web;
 
 namespace LexBlog.Models
 {
-    public class BlogViewModel
-    {        
+    public class CreateViewModel
+    {
+        [Required]
+        [Display(Name = "Title")]
+        public string Title { get; set; }
+
+        [Required]
+        [Display(Name = "Description")]
+        public string Body { get; set; }
     }
 }

@@ -11,6 +11,7 @@ namespace LexBlog.Models
         
         public int Id { get; set; }
         public string Title { get; set; }
+        [Display(Name = "Description")]
         public string Body { get; set; }
         [DisplayFormat(DataFormatString = "{0:MMM dd, yyyy}")]
         public DateTime Created { get; set; }
