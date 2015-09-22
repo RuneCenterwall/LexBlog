@@ -17,6 +17,7 @@ namespace LexBlog.Models
         [DisplayFormat(DataFormatString = "{0:MMM dd, yyyy}")]
         public DateTime Edited { get; set; }
         public virtual ApplicationUser Owner { get; set; }
+        public virtual ICollection<Post> Posts { get; set; }
         public int Views { get; set; }    
         
              

@@ -11,5 +11,7 @@ namespace LexBlog.Models
         public string Body { get; set; }
         public DateTime Created { get; set; }
         public DateTime Edited { get; set; }
+        public virtual Post Post { get; set; }
+        public virtual ApplicationUser Owner { get; set; }
     }
 }
