@@ -35,7 +35,8 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Title)
+            
+           @Html.ActionLink(Html.DisplayFor(modelItem => item.Title).ToHtmlString(), "BlogView")
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Body)
