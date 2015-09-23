@@ -16,4 +16,14 @@ namespace LexBlog.Models
         [Display(Name = "Description")]
         public string Body { get; set; }
     }
+
+        //[Required]
+    public class BlogListByViewsViewModel
+
+    {
+        public int Views { get; set; }
+        public string Title { get; set; }
+        public DateTime Date { get; set; }
+        public virtual ApplicationUser Owner { get; set; }
+    }
 }
