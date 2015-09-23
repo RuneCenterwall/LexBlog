@@ -151,5 +151,6 @@ footer {
 }
 
 .btn-group {
-    padding-top: 8px;
+    padding-top: 8px;    
+    display: block;
 }
