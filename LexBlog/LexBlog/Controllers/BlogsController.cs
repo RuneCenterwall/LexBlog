@@ -174,12 +174,23 @@ namespace LexBlog.Controllers
             return View();
         }
 
-        public ActionResult SearchResult(String searchtext)
+        public ActionResult SearchResult(string searchtext)
         {
+            SearchResultViewModel model = new SearchResultViewModel();
 
+            model.SearchString = searchtext;
 
+            model.Posts = db.Posts.ToList().FindAll(post =>
+                post.Title.Contains(searchtext) ||
+                (post.Body != null) ? post.Body.Contains(searchtext) : false
+                );
 
-            return RedirectToAction("AllResult", new { message = "Search Result" });
+            model.Blogs = db.Blogs.ToList().FindAll(blog =>
+                blog.Title.Contains(searchtext) ||
+                (blog.Description != null) ? blog.Description.Contains(searchtext) : false
+                );
+
+            return View(model);
         }
 
         public ActionResult ViewResult()

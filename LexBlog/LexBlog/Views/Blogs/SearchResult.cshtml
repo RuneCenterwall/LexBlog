@@ -1,37 +1,31 @@
-﻿@model IEnumerable<LexBlog.Models.Blog>
+﻿@using LexBlog.Models
+@model SearchResultViewModel
 
 @{
-    ViewBag.Title = "SearchResult";
+    ViewBag.Title = "Search results for " + Model.SearchString;
 }
 
+<h2>Search results for "@Model.SearchString"</h2>
+<div>
+    @if (Model.Blogs != null)
+    {
+        <h3>Blogs</h3>
+        <div class="search-list-blogs">
+            @foreach (Blog item in Model.Blogs)
+            {
+                Html.RenderPartial("_BlogPartial", item);
+            }
+        </div>
+    }
 
-
-<h2>SearchResult</h2>
-
-@Html.Partial("_ShowTags")
-
-
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Body)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Created)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Edited)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Owner)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Views)
-        </th>
-        <th></th>
-    </tr>
-</table>
-
+    @if (Model.Posts != null)
+    {
+        <h3>Posts</h3>
+        <div class="search-list-posts">
+            @foreach (Post item in Model.Posts)
+            {
+                Html.RenderPartial("_PostPartial", item);
+            }
+        </div>
+    }
+</div>

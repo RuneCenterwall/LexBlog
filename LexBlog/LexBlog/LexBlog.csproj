@@ -186,6 +186,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Post.cs" />
+    <Compile Include="Models\SearchPostViewModel.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -266,6 +267,8 @@
     <Content Include="Views\Blogs\SearchResult.cshtml" />
     <Content Include="Views\Shared\_ShowTags.cshtml" />
     <Content Include="Views\Blogs\CreatePost.cshtml" />
+    <Content Include="Views\Blogs\_BlogPartial.cshtml" />
+    <Content Include="Views\Blogs\_PostPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
