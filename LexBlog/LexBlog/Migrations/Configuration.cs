@@ -37,7 +37,7 @@ namespace LexBlog.Migrations
                     new LexBlog.Models.Blog()
                     {
                         Title = "TestBlog01",
-                        Body = "TestBody01",
+                        Description = "TestBody01",
                         Created = DateTime.Now,
                         Edited = DateTime.Now,
                         Views = 200

@@ -57,7 +57,7 @@ namespace LexBlog.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Title,Body")] Blog blog)
+        public ActionResult Create([Bind(Include = "Title,Description")] Blog blog)
         {
 
 

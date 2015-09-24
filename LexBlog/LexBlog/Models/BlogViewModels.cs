@@ -9,12 +9,12 @@ namespace LexBlog.Models
     public class CreateViewModel
     {
         [Required]
-        [Display(Name = "Title")]
+        //[Display(Name = "Title")]
         public string Title { get; set; }
 
         [Required]
-        [Display(Name = "Description")]
-        public string Body { get; set; }
+        //[Display(Name = "Description")]
+        public string Description { get; set; }
     }
 
         //[Required]
