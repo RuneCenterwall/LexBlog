@@ -4,7 +4,7 @@
                string controller = "Blogs";
            }
 <div>
-    @Html.ActionLink(Model.Title, "BlogView", controller, routeValues, new { @class = "blog-partial-link" })
+    @Html.ActionLink(HttpUtility.HtmlDecode(Model.Title), "BlogView", controller, routeValues, new { @class = "blog-partial-link" })
     <p>@Model.Description</p>
     <p>Created by <span class="blog-partial-username">@Model.Owner.UserName</span> on @Model.Created.</p>
     <p>Last edited: @Model.Edited. Viewed @Model.Views times.</p>
