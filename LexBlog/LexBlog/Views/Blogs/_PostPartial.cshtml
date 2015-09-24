@@ -1,0 +1,11 @@
+﻿@model LexBlog.Models.Post
+@{
+    object routeValues = new { id = Model.Id };
+    string controller = "Posts";
+}
+<div>
+    @Html.ActionLink(Model.Title, "PostView", controller, routeValues, new { @class = "post-partial-link" })
+    <p>@Model.Body</p>
+    <p>Posted by <span class="post-partial-username">@Model.Blog.Owner.UserName</span> in @Model.Blog.Title</p>
+    <p>Created on @Model.Created. Last edited: @Model.Edited. Viewed @Model.Views times.</p>
+</div>
