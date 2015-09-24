@@ -36,7 +36,7 @@
     <tr>
         <td>
             
-           @Html.ActionLink(Html.DisplayFor(modelItem => item.Title).ToHtmlString(), "BlogView")
+           @Html.ActionLink(HttpUtility.HtmlDecode(Html.DisplayFor(modelItem => item.Title).ToHtmlString()), "BlogView")
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Description)
