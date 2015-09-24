@@ -179,7 +179,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Blog.cs" />
-    <Compile Include="Models\BlogViewModel.cs">
+    <Compile Include="Models\BlogViewModels.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Models\Comment.cs" />

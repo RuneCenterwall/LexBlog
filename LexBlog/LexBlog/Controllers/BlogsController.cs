@@ -151,6 +151,19 @@ namespace LexBlog.Controllers
             base.Dispose(disposing);
         }
 
+
+
+        // GET: BlogListByViews
+        //public ActionResult BlogListByViews()
+        //{
+        //    List<BlogListByViewsViewModel> blogList;
+
+        //    blogList = db.Blogs.ToList();
+
+        //    return View(blogList);
+        //}
+
+
         public ActionResult MyBlog()
         {
             return View();
