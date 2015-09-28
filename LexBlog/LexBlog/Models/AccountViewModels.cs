@@ -49,9 +49,8 @@ namespace LexBlog.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "User Name")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -68,6 +67,11 @@ namespace LexBlog.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        //RC Added 2015-09-28
+        [Required]
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
 
         [Required]
         [Display(Name = "First name")]

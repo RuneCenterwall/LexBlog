@@ -31,8 +31,8 @@ namespace LexBlog.Migrations
 
             ApplicationUser user2 = new ApplicationUser
             {
-                UserName = "BjörnB",
-                Email = "bjorn.bjornsson@amail.com",
+                UserName = "BjornB",
+                Email = "bjorn.bjornsson@bmail.com",
                 FirstName = "Björn",
                 LastName = "Björnsson",
                 PhoneNumber = "+462123456",
@@ -41,18 +41,50 @@ namespace LexBlog.Migrations
             ApplicationUser user3 = new ApplicationUser
             {
                 UserName = "CarlC",
-                Email = "carl.carlsson@amail.com",
+                Email = "carl.carlsson@cmail.com",
                 FirstName = "Carl",
                 LastName = "Carlsson",
                 PhoneNumber = "+463123456",
             };
 
-            manager.Create(user1, "Aaa-123");
-            manager.Create(user2, "Bbb-123");
-            manager.Create(user3, "Ccc-123");
+            //if (manager.FindByEmail("anders.andersson@amail.com") == null) {
+            //    manager.Create(user1, "Aaa-123");
+            //}
+            //user1 = manager.FindByEmail("anders.andersson@amail.com");
+            
+            //if (manager.FindByEmail("bjorn.bjornsson@bmail.com") == null) {
+            //    manager.Create(user2, "Bbb-123");
+            //}
+            //user1 = manager.FindByEmail("bjorn.bjornsson@bmail.com");
+            
+            //if (manager.FindByEmail("carl.carlsson@cmail.com") == null) {
+            //    manager.Create(user3, "Ccc-123");
+            //}
+            //user1 = manager.FindByEmail("carl.carlsson@cmail.com");
+
+
+            if (manager.FindByName("andersa") == null)
+            {
+                manager.Create(user1, "Aaa-123");
+            }
+            user1 = manager.FindByName("andersa");
+
+            if (manager.FindByName("bjornb") == null)
+            {
+                manager.Create(user2, "Bbb-123");
+            }
+            user2 = manager.FindByName("bjornb");
+
+            if (manager.FindByName("carlc") == null)
+            {
+                manager.Create(user3, "Ccc-123");
+            }
+            user3 = manager.FindByName("carlc");
+
 
             //RC: Rest not finished ...
-            context.Blogs.AddOrUpdate(
+            context.Blogs.AddOrUpdate
+                (
                     b => b.Title, // identifier - if this value already exists, update instead of add
                     new LexBlog.Models.Blog()
                     {
@@ -60,12 +92,36 @@ namespace LexBlog.Migrations
                         Description = "TestDescr01",
                         Created = DateTime.Now,
                         Edited = DateTime.Now,
-                        Views = 10
-                        Owner = manager.Users.First<context>
-                        {
-
+                        Views = 10,
+                        Owner = user1
                     }
+                );
 
+            context.Blogs.AddOrUpdate
+                (
+                    b => b.Title, // identifier - if this value already exists, update instead of add
+                    new LexBlog.Models.Blog()
+                    {
+                        Title = "TestBlog02",
+                        Description = "TestDescr02",
+                        Created = DateTime.Now,
+                        Edited = DateTime.Now,
+                        Views = 20,
+                        Owner = user2
+                    }
+                );
+
+            context.Blogs.AddOrUpdate
+                (
+                    b => b.Title, // identifier - if this value already exists, update instead of add
+                    new LexBlog.Models.Blog()
+                    {
+                        Title = "TestBlog03",
+                        Description = "TestDescr03",
+                        Created = DateTime.Now,
+                        Edited = DateTime.Now,
+                        Views = 30,
+                        Owner = user3
                     }
                 );
 
