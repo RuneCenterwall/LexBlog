@@ -195,19 +195,15 @@ namespace LexBlog.Controllers
 
         public ActionResult ViewResult()
         {
-            return RedirectToAction("AllResult", new { message = "Views Result" });
+            return View();
         }
 
         public ActionResult TagResult()
         {
-            return RedirectToAction("AllResult", new { message = "Tags Result" });
-        }
-
-        public ActionResult AllResult(string message)
-        {
-            ViewBag.rubrik = message;
             return View();
         }
+
+       
 
 
 

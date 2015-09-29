@@ -210,9 +210,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\Blogs\AllResult.cshtml">
-      <SubType>Code</SubType>
-    </Content>
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -261,6 +258,8 @@
     <Content Include="Views\Blogs\CreatePost.cshtml" />
     <Content Include="Views\Blogs\_BlogPartial.cshtml" />
     <Content Include="Views\Blogs\_PostPartial.cshtml" />
+    <Content Include="Views\Blogs\ViewResult.cshtml" />
+    <Content Include="Views\Blogs\TagResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
