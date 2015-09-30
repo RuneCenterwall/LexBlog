@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace LexBlog.Models
+namespace LexBlog.Models.IdentityModels
 {
     public class ExternalLoginConfirmationViewModel
     {

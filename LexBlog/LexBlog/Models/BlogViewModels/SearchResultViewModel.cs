@@ -1,9 +1,11 @@
-﻿using System;
+﻿using LexBlog.Models.BlogDBModels;
+using LexBlog.Models.BlogViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace LexBlog.Models
+namespace LexBlog.Models.BlogViewModels
 {
     public class SearchResultViewModel
     {

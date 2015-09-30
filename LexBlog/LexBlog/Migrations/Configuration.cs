@@ -1,6 +1,8 @@
 namespace LexBlog.Migrations
 {
     using LexBlog.Models;
+    using LexBlog.Models.BlogDBModels;
+    using LexBlog.Models.IdentityModels;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
     using System;
@@ -8,14 +10,14 @@ namespace LexBlog.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<LexBlog.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(LexBlog.Models.ApplicationDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
             var store = new UserStore<ApplicationUser>(context);
             var manager = new UserManager<ApplicationUser>(store);
@@ -86,7 +88,7 @@ namespace LexBlog.Migrations
             context.Blogs.AddOrUpdate
                 (
                     b => b.Title, // identifier - if this value already exists, update instead of add
-                    new LexBlog.Models.Blog()
+                    new Blog()
                     {
                         Title = "TestBlog01",
                         Description = "TestDescr01",
@@ -100,7 +102,7 @@ namespace LexBlog.Migrations
             context.Blogs.AddOrUpdate
                 (
                     b => b.Title, // identifier - if this value already exists, update instead of add
-                    new LexBlog.Models.Blog()
+                    new Blog()
                     {
                         Title = "TestBlog02",
                         Description = "TestDescr02",
@@ -114,7 +116,7 @@ namespace LexBlog.Migrations
             context.Blogs.AddOrUpdate
                 (
                     b => b.Title, // identifier - if this value already exists, update instead of add
-                    new LexBlog.Models.Blog()
+                    new Blog()
                     {
                         Title = "TestBlog03",
                         Description = "TestDescr03",

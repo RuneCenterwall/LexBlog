@@ -1,4 +1,5 @@
 ﻿using LexBlog.Models;
+using LexBlog.Models.IdentityModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;

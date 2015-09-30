@@ -1,9 +1,10 @@
-﻿using System;
+﻿using LexBlog.Models.IdentityModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace LexBlog.Models
+namespace LexBlog.Models.BlogDBModels
 {
     public class Comment
     {

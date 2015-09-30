@@ -8,6 +8,9 @@ using System.Web;
 using System.Web.Mvc;
 using LexBlog.Models;
 using Microsoft.AspNet.Identity;
+using LexBlog.Models.IdentityModels;
+using LexBlog.Models.BlogDBModels;
+using LexBlog.Models.BlogViewModels;
 
 namespace LexBlog.Controllers
 {
