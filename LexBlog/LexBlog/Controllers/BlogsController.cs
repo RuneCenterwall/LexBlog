@@ -184,13 +184,13 @@ namespace LexBlog.Controllers
             model.SearchString = searchtext;
 
             model.Posts = db.Posts.ToList().FindAll(post =>
-                post.Title.Contains(searchtext) ||
-                (post.Body != null) ? post.Body.Contains(searchtext) : false
+                (post.Title != null) ? post.Title.ToUpper().Contains(searchtext.ToUpper()) : false ||
+                (post.Body != null) ? post.Body.ToUpper().Contains(searchtext.ToUpper()) : false
                 );
 
             model.Blogs = db.Blogs.ToList().FindAll(blog =>
-                blog.Title.Contains(searchtext) ||
-                (blog.Description != null) ? blog.Description.Contains(searchtext) : false
+                (blog.Title != null) ? ( ( blog.Title ).ToUpper() ).Contains( searchtext.ToUpper() ) : false ||
+                (blog.Description != null) ? blog.Description.ToUpper().Contains(searchtext.ToUpper()) : false
                 );
 
             return View(model);
@@ -209,7 +209,7 @@ namespace LexBlog.Controllers
        
 
 
-
+        [Authorize]
         public ActionResult CreatePost()
         {
             return View();
